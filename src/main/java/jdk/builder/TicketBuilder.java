@@ -1,0 +1,1 @@
+package jdk.builder;public class TicketBuilder {    public static Object builder(TicketHelper helper){        System.out.println("通过TickHelper构建逃票信息");        return null;    }}
