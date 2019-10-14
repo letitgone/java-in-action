@@ -10,6 +10,8 @@ public class Test {
 
     private int i;
 
+    private static StringBuilder stringBuilder = new StringBuilder("");
+
     public Test(){
 
     }
@@ -23,5 +25,6 @@ public class Test {
     }
     public static void main(String[] args) {
         System.out.println("test!");
+        Lazy.getInstance();
     }
 }
