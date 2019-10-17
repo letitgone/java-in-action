@@ -21,35 +21,35 @@ public class Person {
 
     private String classname;
 
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-//
-//    public int getId() {
-//        return id;
-//    }
-//
-//    public void setId(int id) {
-//        this.id = id;
-//    }
-//
-//    public String getClassName() {
-//        return className;
-//    }
-//
-//    public void setClassName(String className) {
-//        this.className = className;
-//    }
-//
-//    public String getClassname() {
-//        return classname;
-//    }
-//
-//    public void setClassname(String classname) {
-//        this.classname = classname;
-//    }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getClassName() {
+        return className;
+    }
+
+    public void setClassName(String className) {
+        this.className = className;
+    }
+
+    public String getClassname() {
+        return classname;
+    }
+
+    public void setClassname(String classname) {
+        this.classname = classname;
+    }
 }
