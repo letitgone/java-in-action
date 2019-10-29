@@ -5,6 +5,8 @@ import java.util.Scanner;
 /**
  * @Author ZhangGJ
  * @Date 2019/10/22
+ * 
+ * 阶乘
  */
 public class MyFactorial {
     public static void main(String[] args) {

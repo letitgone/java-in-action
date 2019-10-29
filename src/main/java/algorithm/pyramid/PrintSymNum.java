@@ -5,6 +5,13 @@ import java.util.Scanner;
 /**
  * @Author ZhangGJ
  * @Date 2019/10/18
+ *
+ *         1
+ *  *     121
+ *  *    12321
+ *  *   1234321
+ *  *  123454321
+ *  * 12345654321
  */
 public class PrintSymNum {
     public static void main(String[] args) {

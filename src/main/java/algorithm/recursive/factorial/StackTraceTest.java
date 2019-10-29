@@ -7,6 +7,8 @@ import java.util.Scanner;
  *
  * @author Cay Horstmann
  * @version 1.01 2004-05-10
+ *
+ * 阶乘
  */
 public class StackTraceTest {
     /**
@@ -19,13 +21,15 @@ public class StackTraceTest {
         System.out.println("factorial(" + n + "):");
         Throwable t = new Throwable();
         StackTraceElement[] frames = t.getStackTrace();
-        for (StackTraceElement f : frames)
+        for (StackTraceElement f : frames) {
             System.out.println(f);
+        }
         int r;
-        if (n <= 1)
+        if (n <= 1) {
             r = 1;
-        else
+        } else {
             r = n * factorial(n - 1);
+        }
         System.out.println("return " + r);
         return r;
     }
