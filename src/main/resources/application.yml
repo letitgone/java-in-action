@@ -1,1 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sino?useSSL=false&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useUnicode=true&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: 123456
 
+file:
+  upload:
+    root:
+      dir:
+        windows: C:/pactera/upload/data/
+        mac: /Users/zhanggengjia/Downloads/aaabbbbaaaa/pactera/upload/data/
+        linux: /pactera/upload/data/
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  typeAliasesPackage: web.generator.domain
