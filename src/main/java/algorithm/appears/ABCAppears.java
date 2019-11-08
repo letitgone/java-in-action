@@ -22,7 +22,7 @@ public class ABCAppears {
             "/Users/zhanggengjia/Downloads/IntellijProject/java_in_action/src/main/resources/Article");
         InputStream in = null;
         int i;
-        int tatal = 0;
+        int total = 0;
         String article = "" ;
         try {
             try {
@@ -33,7 +33,7 @@ public class ABCAppears {
                 while ((i = in.read()) != -1) {
                     String s = String.valueOf((char) i);
                     article += s;
-                    tatal++;
+                    total++;
                 }
             } finally {
                 in.close();
@@ -44,7 +44,7 @@ public class ABCAppears {
             e.printStackTrace();
         }
         System.out.println(article);
-        System.out.println("Total: " + tatal);
+        System.out.println("Total: " + total);
 
         Map<String, Integer> map = new HashMap<>();
 
@@ -68,17 +68,3 @@ public class ABCAppears {
         System.out.println(map.toString());
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
