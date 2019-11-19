@@ -1,0 +1,1 @@
+package aop.mapper;import aop.domain.ExceptionLogs;import org.springframework.stereotype.Repository;@Repositorypublic interface ExceptionLogsMapper {    int insertExceptionLogs(ExceptionLogs exceptionLogs);}

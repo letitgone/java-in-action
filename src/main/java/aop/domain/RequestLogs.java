@@ -1,4 +1,4 @@
-package design.pattern.builder.inherit.domain;
+package aop.domain;
 
 import lombok.Data;
 
@@ -10,6 +10,10 @@ import lombok.Data;
 public class RequestLogs{
 
     private long requestLogId;
+    /**
+     * log-token
+     */
+    private long logToken;
     /**
      * 请求时间
      */
@@ -41,6 +45,7 @@ public class RequestLogs{
 
     private RequestLogs(Builder builder){
         this.requestLogId = builder.requestLogId;
+        this.logToken = builder.logToken;
         this.requestTime = builder.requestTime;
         this.requestJson = builder.requestJson;
         this.requestJsonByte = builder.requestJsonByte;
@@ -81,9 +86,18 @@ public class RequestLogs{
          * 操作人
          */
         private String requestOperator;
+        /**
+         * log-token
+         */
+        private long logToken;
 
         public Builder requestLogId(long requestLogId){
             this.requestLogId = requestLogId;
+            return this;
+        }
+
+        public Builder logToken(long logToken){
+            this.logToken = logToken;
             return this;
         }
 

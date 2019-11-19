@@ -1,0 +1,1 @@
+package aop.mapper;import aop.domain.RequestLogs;import org.springframework.stereotype.Repository;@Repositorypublic interface RequestLogsMapper {    int insertRequestLogs(RequestLogs requestLogs);}

@@ -1,4 +1,4 @@
-package design.pattern.builder.inherit.domain;
+package aop.domain;
 
 import lombok.Data;
 

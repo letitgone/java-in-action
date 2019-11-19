@@ -1,0 +1,1 @@
+package aop.mapper;import aop.domain.ResponseLogs;import org.springframework.stereotype.Repository;@Repositorypublic interface ResponseLogsMapper {    int insertResponseLogs(ResponseLogs responseLogs);}

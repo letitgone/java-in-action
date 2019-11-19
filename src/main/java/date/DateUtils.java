@@ -1,0 +1,1 @@
+package date;import java.text.SimpleDateFormat;import java.util.Date;public class DateUtils {    private static final String TIME_STAMP = "yyyy-MM-dd HH:mm:ss";    public static final String timestampFormat(long timestamp){        Date date = new Date(timestamp);        return new SimpleDateFormat(TIME_STAMP).format(date);    }}

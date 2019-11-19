@@ -1,0 +1,1 @@
+package aop.service;import aop.domain.ResponseLogs;public interface IResponseLogsService {    int insertResponseLogs(ResponseLogs responseLogs);}

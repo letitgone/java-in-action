@@ -1,0 +1,1 @@
+package aop.service;import aop.domain.RequestLogs;public interface IRequestLogsService {    int insertRequestLogs(RequestLogs requestLogs);}

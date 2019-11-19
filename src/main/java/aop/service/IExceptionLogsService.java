@@ -1,0 +1,1 @@
+package aop.service;import aop.domain.ExceptionLogs;public interface IExceptionLogsService {    int insertExceptionLogs(ExceptionLogs exceptionLogs);}
