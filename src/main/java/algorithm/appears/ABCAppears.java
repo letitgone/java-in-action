@@ -10,6 +10,7 @@ import java.util.regex.Pattern;
  * @Date 2019/10/25
  * <p>
  * 单词出现的次数
+ * https://www.jianshu.com/p/292f4e346b5d
  */
 public class ABCAppears {
 
@@ -58,12 +59,25 @@ public class ABCAppears {
             if (!matcher.matches()) {
                 continue;
             }
-            if (!map.containsKey(String.valueOf(words[j]))) {
-                map.put(String.valueOf(words[j]), num);
-            } else {
-                Integer value = map.get(String.valueOf(words[j]));
-                map.put(String.valueOf(words[j]), value + 1);
-            }
+//            method 1:
+//            if (!map.containsKey(String.valueOf(words[j]))) {
+//                map.put(String.valueOf(words[j]), num);
+//            } else {
+//                Integer value = map.get(String.valueOf(words[j]));
+//                map.put(String.valueOf(words[j]), value + 1);
+//            }
+//            {A=1, F=1, J=1, S=3, T=1, a=25, b=3, c=14, d=8, e=38, f=10, g=8, h=6, i=29, k=3, l=16, m=13, n=32, o=30, p=23, r=23, s=23, t=25, u=10, v=6, w=2, y=5}
+//            method 2:
+//            map.put(String.valueOf(words[j]), map.getOrDefault(String.valueOf(words[j]),0) + 1);
+//            {A=1, F=1, J=1, S=3, T=1, a=25, b=3, c=14, d=8, e=38, f=10, g=8, h=6, i=29, k=3, l=16, m=13, n=32, o=30, p=23, r=23, s=23, t=25, u=10, v=6, w=2, y=5}
+////            method 3:
+//            putIfAbsent   如果传入key对应的value已经存在，就返回存在的value，不进行替换。如果不存在，就添加key和value，返回null
+//            map.putIfAbsent(String.valueOf(words[j]), 0);
+//            map.put(String.valueOf(words[j]), map.get(String.valueOf(words[j])) + 1);
+//            {A=1, F=1, J=1, S=3, T=1, a=25, b=3, c=14, d=8, e=38, f=10, g=8, h=6, i=29, k=3, l=16, m=13, n=32, o=30, p=23, r=23, s=23, t=25, u=10, v=6, w=2, y=5}
+////            method 4:
+            map.merge(String.valueOf(words[j]), 1, Integer::sum);
+//            {A=1, F=1, J=1, S=3, T=1, a=25, b=3, c=14, d=8, e=38, f=10, g=8, h=6, i=29, k=3, l=16, m=13, n=32, o=30, p=23, r=23, s=23, t=25, u=10, v=6, w=2, y=5}
         }
         System.out.println(map.toString());
     }
