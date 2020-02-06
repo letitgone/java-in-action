@@ -20,7 +20,7 @@ public class WordsAppears {
     private static final String replace = "";
 
     public static void main(String[] args) {
-        File file = new File("/Users/zhanggengjia/Downloads/IntellijProject/java_in_action/src/main/resources/Article");
+        File file = new File("/Users/zhanggengjia/Downloads/IntellijProject/java-in-action/src/main/resources/Article");
         String s = "";
         int i;
         InputStream in = null;

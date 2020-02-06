@@ -1,1 +1,1 @@
-# java_in_action
+# java-in-action

@@ -9,10 +9,10 @@
         <version>2.1.9.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>java_in_action</groupId>
-    <artifactId>java_in_action</artifactId>
+    <groupId>java-in-action</groupId>
+    <artifactId>java-in-action</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>java_in_action</name>
+    <name>java-in-action</name>
     <description>Demo project for Java</description>
 
     <properties>

@@ -20,7 +20,7 @@ public class ABCAppears {
 
     public static void main(String[] args) {
         File file = new File(
-            "/Users/zhanggengjia/Downloads/IntellijProject/java_in_action/src/main/resources/Article");
+            "/Users/zhanggengjia/Downloads/IntellijProject/java-in-action/src/main/resources/Article");
         InputStream in = null;
         int i;
         int total = 0;
