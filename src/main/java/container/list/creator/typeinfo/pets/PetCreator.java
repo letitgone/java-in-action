@@ -15,11 +15,11 @@ public abstract class PetCreator {
 
     public abstract List<Class<? extends Pet>> types();
 
-    public Pet randomPet(){
+    public Pet randomPet() {
         int n = this.rand.nextInt(this.types().size());
 
         try {
-            return (Pet)((Class)this.types().get(n)).newInstance();
+            return (Pet) ((Class) this.types().get(n)).newInstance();
         } catch (InstantiationException e) {
             throw new RuntimeException(e);
         } catch (IllegalAccessException e) {
