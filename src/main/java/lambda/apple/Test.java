@@ -20,8 +20,33 @@ public class Test {
         }
         return result;
     }
+    
+    public static <T> List<T> filter(List<T> list, Predicate<T> p) {
+        List<T> result = new ArrayList<>();
+        for (T e : list) {
+            if (p.test(e)) {
+                result.add(e);
+            }
+        }
+        return result;
+    }
 
     public static void main(String[] args) {
         filterApples(new ArrayList<>(), new AppleGreenColorPredicate());
+
+        /**
+         * 匿名内部类
+         */
+        List<Apple> redApples = filterApples(new ArrayList<>(), new ApplePredicate() {
+            @Override
+            public boolean test(Apple apple) {
+                return "red".equals(apple.getColor());
+            }
+        });
+
+        /**
+         * Lambda表达式
+         */
+        List<Apple> redApple = filter(new ArrayList<>(), (Apple apple) -> "red".equals(apple.getColor()));
     }
 }
