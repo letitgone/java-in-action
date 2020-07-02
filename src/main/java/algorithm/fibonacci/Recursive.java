@@ -16,13 +16,13 @@ public class Recursive {
     }
 
     public static void main(String[] args) {
-        int n = Integer.valueOf(args[0]);
+        int n = 10;
         if (n < 0) {
             System.out.println("Cannot use negative numbers");
             return;
         }
         for (int i = 1; i <= n; i++) {
-            System.out.println(fibonacci(i));
+            System.out.print(fibonacci(i) + " ");
         }
     }
 }
