@@ -144,4 +144,81 @@
         </plugins>
     </build>
 
+    <repositories>
+        <repository>
+            <id>komodo</id>
+            <name>komodo nexus maven</name>
+            <!--suppress UnresolvedMavenProperty -->
+            <url>http://${repository.url}/repository/maven-public/</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>komodo</id>
+            <name>komodo nexus maven</name>
+            <!--suppress UnresolvedMavenProperty -->
+            <url>http://${repository.url}/repository/maven-public/</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <distributionManagement>
+        <repository>
+            <id>komodo-nexus-releases</id>
+            <name>Releases</name>
+            <url>http://${repository.url}/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>komodo-nexus-snapshot</id>
+            <name>Snapshot</name>
+            <url>http://${repository.url}/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <repository.url>8.140.171.253:8081</repository.url>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>bug</id>
+            <properties>
+                <repository.url>8.1408888.171.253:8081</repository.url>
+            </properties>
+        </profile>
+        <profile>
+            <id>release</id>
+            <properties>
+                <repository.url>8.140.171.253:8081</repository.url>
+            </properties>
+        </profile>
+        <profile>
+            <id>master</id>
+            <properties>
+                <repository.url>8.140.171.253:8081</repository.url>
+            </properties>
+        </profile>
+    </profiles>
+
 </project>
